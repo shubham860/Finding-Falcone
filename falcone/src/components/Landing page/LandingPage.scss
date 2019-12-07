@@ -1,4 +1,10 @@
 .mainContainer{
   display : grid;
-  grid-template-rows: 10% 70% 20%;
+  grid-template-rows: 10vh 78vh 12vh;
+
+  .mainPanel{
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
 }
+
