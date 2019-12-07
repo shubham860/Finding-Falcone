@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import Header from './Landing page/Header/Header';
-import PlanetPanel from './Landing page/Main Panel/Static panel/Dashboard';
-import Dashboard from './Landing page/Main Panel/Dynamic Panels/PlanetPanel';
-import Footer from './Landing page/Footer/Footer';
+import Header from '../Header/Header';
+import PlanetPanel from '../Main panel/Static panel/PlanetPanel';
+import Dashboard from '../Main panel/Dynamic panels/Dashboard';
+import Footer from '../Footer/Footer';
+import './LandingPage.scss'
 
 class LandingPage extends Component {
     render() {
