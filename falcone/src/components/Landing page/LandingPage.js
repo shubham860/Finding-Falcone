@@ -8,7 +8,6 @@ import './LandingPage.scss'
 class LandingPage extends Component {
     render() {
         return (
-
             <div className="mainContainer">
                 <div className="header">
                     <Header/>
@@ -28,7 +27,6 @@ class LandingPage extends Component {
                     <Footer/>
                 </div>
             </div>
-
         );
     }
 }
