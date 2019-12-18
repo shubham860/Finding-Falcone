@@ -3,7 +3,7 @@ import Header from '../Header/Header';
 import PlanetPanel from '../Main panel/Static panel/PlanetPanel';
 import Dashboard from '../Main panel/Dynamic panels/Dashboard';
 import Footer from '../Footer/Footer';
-import './LandingPage.scss'
+import './LandingPage.scss';
 
 class LandingPage extends Component {
     render() {
