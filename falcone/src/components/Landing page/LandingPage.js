@@ -9,6 +9,7 @@ class LandingPage extends Component {
     render() {
         return (
             <div className="mainContainer">
+
                 <div className="header">
                     <Header/>
                 </div>
