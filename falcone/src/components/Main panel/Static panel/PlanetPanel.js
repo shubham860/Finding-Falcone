@@ -5,7 +5,7 @@ class PlanetPanel extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            planet1 : true,
+            planet1 : false,
             planet2 : false,
             planet3 : false,
             planet4 : false,
@@ -15,17 +15,9 @@ class PlanetPanel extends Component {
     }
 
     handler = (event) => {
-        const value = [event.target.name];
-        if(this.state.===false){
-            this.setState({
-                [event.target.name] : true
-            })
-        }
-        else{
-            this.setState({
-                [event.target.name] : false
-            })
-        }
+       this.setState({
+           [event.target.name] : ![event.target.value]
+       })
     };
 
     render() {
