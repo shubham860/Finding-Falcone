@@ -45,11 +45,9 @@ class PlanetPanel extends Component {
             <div className="planetPanel">
                 <div className="row">
                     {
-                        Object.keys(infoObject).map(function(key, index) {
-                            return <div className="planets">
-                                        <img src={key} alt=""
-                                    </div>
-                        })
+                        Object.entries(infoObject).map( ([key,value]) => {
+                            console.log(`${key}: ${value}`);
+                    })
 
                     }
                 </div>
