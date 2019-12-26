@@ -13,10 +13,11 @@ class PlanetPanel extends Component {
         super(props);
         this.state = {
             planets : [],
-            planetsImages : [{planet1},{planet2},{planet3},{planet4},{planet5},{planet6}]
+            planetsImages : [planet1,planet2,planet3,planet4,planet5,planet6]
         }
     }
 
+    /* Fetching Planets Names From Planets API*/
     componentDidMount() {
         axios
             .get(`https://findfalcone.herokuapp.com/planets`)
@@ -28,41 +29,29 @@ class PlanetPanel extends Component {
             .catch(error => {
                 alert(error)
             });
-
-
-    }
-
-
-
+      }
 
     render() {
-        console.log(this.state.planets);
+        const {planets,planetsImages} = this.state;
+        var infoObject = {};
+
+        planetsImages.forEach(function(k,i){
+            infoObject[k] = planets[i]
+        });
+
+        console.log(infoObject)
         return (
             /* Planet panel :- it contains all the planets images and Names */
             <div className="planetPanel">
                 <div className="row">
-                    <div className="planet">
-                        <button onClick={this.handler} name="planet1">Planet-1</button>
-                    </div>
-                    <div className="planet">
-                        <button onClick={this.handler} name="planet2">Planet-2</button>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="planet">
-                        <button onClick={this.handler} name="planet3">Planet-3</button>
-                    </div>
-                    <div className="planet">
-                        <button onClick={this.handler} name="planet4">Planet-4</button>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="planet">
-                        <button onClick={this.handler} name="planet5">Planet-5</button>
-                    </div>
-                    <div className="planet">
-                        <button onClick={this.handler} name="planet6">Planet-6</button>
-                    </div>
+                    {
+                        Object.keys(infoObject).map(function(key, index) {
+                            return <div className="planets">
+                                        <img src={key} alt=""
+                                    </div>
+                        })
+
+                    }
                 </div>
             </div>
         );
