@@ -18,7 +18,7 @@ class PlanetPanel extends Component {
         }
     }
 
-    /* Fetching Planets Names From Planets API*/
+    /* Fetching Planets Names From Planets API */
     componentDidMount() {
         axios
             .get(`https://findfalcone.herokuapp.com/planets`)
@@ -46,11 +46,8 @@ class PlanetPanel extends Component {
             <div className="planetPanel">
                 <div className="row">
                     {
-                        Object.keys(infoObject).map((key) => {
-                            return <div className="planet">
-                                        <img src={key} className="planetImage" alt="planetImage"/>
-                                        <h1>{key.name}</h1>
-                                    </div>
+                        Object.entries(infoObject).map(([key,value],index) => {
+                            return console.log()
                         })
                     }
                 </div>
