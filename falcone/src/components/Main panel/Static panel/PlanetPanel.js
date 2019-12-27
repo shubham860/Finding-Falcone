@@ -14,6 +14,7 @@ class PlanetPanel extends Component {
         this.state = {
             planets : [],
             planetsImages : [planet1,planet2,planet3,planet4,planet5,planet6]
+
         }
     }
 
@@ -35,20 +36,22 @@ class PlanetPanel extends Component {
         const {planets,planetsImages} = this.state;
         var infoObject = {};
 
+
         planetsImages.forEach(function(k,i){
             infoObject[k] = planets[i]
         });
-
-        console.log(infoObject)
+        console.log(infoObject);
         return (
             /* Planet panel :- it contains all the planets images and Names */
             <div className="planetPanel">
                 <div className="row">
                     {
-                        Object.entries(infoObject).map( ([key,value]) => {
-                            console.log(`${key}: ${value}`);
-                    })
-
+                        Object.keys(infoObject).map((key) => {
+                            return <div className="planet">
+                                        <img src={key} className="planetImage" alt="planetImage"/>
+                                        <h1>{key.name}</h1>
+                                    </div>
+                        })
                     }
                 </div>
             </div>
