@@ -13,8 +13,8 @@ class PlanetPanel extends Component {
         super(props);
         this.state = {
             planets : [],
-            planetsImages : [planet1,planet2,planet3,planet4,planet5,planet6]
-
+            planetsImages : [planet1,planet2,planet3,planet4,planet5,planet6],
+            infoArray : []
         }
     }
 
@@ -30,25 +30,33 @@ class PlanetPanel extends Component {
             .catch(error => {
                 alert(error)
             });
-      }
+    }
+
+
 
     render() {
+
         const {planets,planetsImages} = this.state;
-        var infoObject = {};
-
-
+        let infoObject = {};
         planetsImages.forEach(function(k,i){
-            infoObject[k] = planets[i]
+            infoObject[k] = planets[i];
         });
-        console.log(infoObject);
+            let data = Object.entries(infoObject)
+            console.log(data);
+
+            for(let i=0 ; i< data.length ; i++){
+                var img = data[i][0];
+                var head = data[i][1]
+            }
+
+            console.log( head)
+
         return (
             /* Planet panel :- it contains all the planets images and Names */
             <div className="planetPanel">
                 <div className="row">
                     {
-                        Object.entries(infoObject).map(([key,value],index) => {
-                            return console.log()
-                        })
+
                     }
                 </div>
             </div>
