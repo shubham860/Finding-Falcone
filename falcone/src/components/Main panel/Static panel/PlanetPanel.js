@@ -49,7 +49,7 @@ class PlanetPanel extends Component {
                 var head = data[i][1]
             }
 
-            console.log( head)
+
 
         return (
             /* Planet panel :- it contains all the planets images and Names */
