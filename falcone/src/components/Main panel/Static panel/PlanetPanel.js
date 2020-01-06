@@ -32,24 +32,12 @@ class PlanetPanel extends Component {
             });
     }
 
-
-
-    render() {
-
+render() {
         const {planets,planetsImages} = this.state;
         let infoObject = {};
         planetsImages.forEach(function(k,i){
             infoObject[k] = planets[i];
         });
-            let data = Object.entries(infoObject)
-            console.log(data);
-
-            for(let i=0 ; i< data.length ; i++){
-                var img = data[i][0];
-                var head = data[i][1]
-            }
-
-
 
         return (
             /* Planet panel :- it contains all the planets images and Names */
