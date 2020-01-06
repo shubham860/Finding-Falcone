@@ -38,7 +38,7 @@ render() {
         planetsImages.forEach(function(k,i){
             infoObject[k] = planets[i];
         });
-
+        console.log(infoObject);
         return (
             /* Planet panel :- it contains all the planets images and Names */
             <div className="planetPanel">
