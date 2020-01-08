@@ -40,9 +40,6 @@ class PlanetPanel extends Component {
 
         console.log(infoObject);
 
-
-
-
  return (
             /* Planet panel :- it contains all the planets images and Names */
             <div className="planetPanel">
