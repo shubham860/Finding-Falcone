@@ -33,7 +33,7 @@ class PlanetPanel extends Component {
     }
 
  render() {
-        const {planets,planetsImages,infoObject,arr} = this.state;
+        const {planets,planetsImages,infoObject} = this.state;
         planetsImages.forEach(function(k,i){
             infoObject[k] = planets[i];
         });
