@@ -44,9 +44,6 @@ class PlanetPanel extends Component {
             /* Planet panel :- it contains all the planets images and Names */
             <div className="planetPanel">
                 <div className="row">
-                    {
-
-                    }
                 </div>
             </div>
         );
