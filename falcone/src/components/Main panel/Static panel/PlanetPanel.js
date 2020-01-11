@@ -17,7 +17,6 @@ class PlanetPanel extends Component {
             infoObject : {},
         }
     }
-
     /* Fetching Planets Names From Planets API */
     componentDidMount() {
         axios
