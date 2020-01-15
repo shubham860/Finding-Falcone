@@ -15,6 +15,7 @@ class PlanetPanel extends Component {
             planets : [],
             planetsImages : [planet1,planet2,planet3,planet4,planet5,planet6],
             infoObject : {},
+            class : false
         }
     }
 
@@ -32,6 +33,8 @@ class PlanetPanel extends Component {
                 alert(error)
             });
     }
+
+
 
  render() {
         const {planets,planetsImages,infoObject} = this.state;
@@ -55,7 +58,7 @@ class PlanetPanel extends Component {
                     {
                         arr.map((item,i) => {
                             return(
-                                <a href="#">
+                                <button onClick={this.highlighter} className="panel">
                                     <div className="planetsPanel" key={i}>
                                         <img src={Object.keys(item)} alt="planets" className="planets" />
                                         {
@@ -65,7 +68,7 @@ class PlanetPanel extends Component {
                                                 </div>
                                             )}
                                     </div>
-                                </a>
+                                </button>
                             )
                         })
                     }
