@@ -33,19 +33,35 @@ class PlanetPanel extends Component {
 
  render() {
         const {planets,planetsImages,infoObject} = this.state;
+        let arr = [];
         planetsImages.forEach(function(k,i){
             infoObject[k] = planets[i];
         });
 
-        console.log(infoObject);
+     for (let prop in infoObject) {
+         if (infoObject.hasOwnProperty(prop)) {
+             let innerObj = {};
+             innerObj[prop] = infoObject[prop];
+             arr.push(innerObj);
+         }
+     }
 
  return (
             /* Planet panel :- it contains all the planets images and Names */
             <div className="planetPanel">
                 <div className="row">
+                    {
+                        arr.map(item => {
+                            Object.entries(item).map(i =>{
+                                return <div className="planets">
+                                        <img src={i} alt="ek"/>
+                                </div>
+                            }  )
+                        })
+                    }
                 </div>
             </div>
-        );
+        )
     }
 }
 
