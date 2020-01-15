@@ -17,6 +17,8 @@ class PlanetPanel extends Component {
             infoObject : {},
         }
     }
+
+
     /* Fetching Planets Names From Planets API */
     componentDidMount() {
         axios
@@ -51,12 +53,20 @@ class PlanetPanel extends Component {
             <div className="planetPanel">
                 <div className="row">
                     {
-                        arr.map(item => {
-                            Object.entries(item).map(i =>{
-                                return <div className="planets">
-                                        <img src={i} alt="ek"/>
-                                </div>
-                            }  )
+                        arr.map((item,i) => {
+                            return(
+                                <a href="#">
+                                    <div className="planetsPanel" key={i}>
+                                        <img src={Object.keys(item)} alt="planets" className="planets" />
+                                        {
+                                            item[Object.keys(item)]===undefined ? null : (
+                                                <div>
+                                                    <p className="planetsDetails">{item[Object.keys(item)].name}</p>
+                                                </div>
+                                            )}
+                                    </div>
+                                </a>
+                            )
                         })
                     }
                 </div>
