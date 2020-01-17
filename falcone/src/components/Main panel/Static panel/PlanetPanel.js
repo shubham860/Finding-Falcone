@@ -19,7 +19,6 @@ class PlanetPanel extends Component {
         }
     }
 
-
     /* Fetching Planets Names From Planets API */
     componentDidMount() {
         axios
