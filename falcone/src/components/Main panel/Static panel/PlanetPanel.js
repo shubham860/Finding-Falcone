@@ -60,11 +60,11 @@ class PlanetPanel extends Component {
                                 <button onClick={this.highlighter} className="panel">
                                     <div className="planetsPanel" key={i}>
                                         <img src={Object.keys(item)} alt="planets" className="planets" />
-                                        {
-                                            item[Object.keys(item)]===undefined ? null : (
-                                                <div>
-                                                    <p className="planetsDetails">{item[Object.keys(item)].name}</p>
-                                                </div>
+                                            {
+                                                item[Object.keys(item)] === undefined ? null : (
+                                                    <div>
+                                                        <p className="planetsDetails">{item[Object.keys(item)].name}</p>
+                                                    </div>
                                             )}
                                     </div>
                                 </button>
