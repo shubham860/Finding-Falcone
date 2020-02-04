@@ -1,0 +1,8 @@
+.mainContainer {
+  display: grid;
+  grid-template-rows: 10vh 78vh 12vh; }
+  .mainContainer .mainPanel {
+    display: grid;
+    grid-template-columns: 40% 60%; }
+
+/*# sourceMappingURL=LandingPage.css.map */
